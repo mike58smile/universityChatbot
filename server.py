@@ -9,7 +9,7 @@ from faq_finder import calculate_semantic, create_list_of_faq
 from functions import preprocess_txt
 from main import get_most_probable_answers
 
-model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2", device="cpu")
+model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device="cpu")
 
 app = FastAPI()
 
