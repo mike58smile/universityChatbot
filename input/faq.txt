@@ -1,0 +1,47 @@
+Kdy budou zveřejněny tematické oblasti a okruhy k SZZ?
+Tematické oblasti a okruhy k SZZ budou studentům zveřejněny v IS od 16. 2. 2025.
+
+Kdo může skládat státní závěrečnou zkoušku (SZZ)?
+Ke státní závěrečné zkoušce (SZZ) může postoupit pouze student, který
+1. do konce zkouškového období letního semestru pro 2. ročník, tj. do 23. 5. 2025, splní kreditovou skladbu včetně podmínek daných studijním plánem programu,
+2. odevzdá diplomovou práci (DP) nejpozději do 28. 5. 2025 podle pokynů garanta studijního programu (SP),
+3. vybere v IS VUT předměty v rámci tematických oblastí a potvrdí v době od 8. 4. 2025 do 6. 5. 2025 přihlášku k SZZ.
+
+Jaké jsou povinnosti při závěru studia?
+Student si v závěru studia průběžně kontroluje v IS VUT splnění kreditové skladby studijního plánu, tj. splnění všech povinných předmětů, splnění minimálního počtu předmětů z jednotlivých skupin a dosažení minimálního počtu kreditů. V případě nesplnění některé z uvedených povinností se ihned dostaví na studijní oddělení.
+
+Jaké šablony mám použít pro svou diplomovou práci?
+Pro vypracování diplomové práce je povinné použití šablony buď ve Wordu, nebo v LaTeX, jejichž aktualizované verze jsou ke stažení na https://www.fekt.vut.cz/pro_studenty/szz.
+
+Měl bych odevzdat také tištěnou verzi své práce?
+Ve stanoveném termínu student odevzdá na příslušném ústavu tištěnou verzi DP, pokud je požadována, viz Směrnice rektora č. 7/22017.
+
+Jak odevzdat diplomovou práci?
+Ve stanoveném termínu student odevzdá na příslušném ústavu tištěnou verzi DP, pokud je požadována, viz Směrnice rektora č. 7/22017. Současně vloží elektronickou verzi DP do IS VUT, maximální povolený objem dat je pro hlavní dokument 35 MB a pro přílohy 15 MB. Vedoucí DP udělí studentovi zápočet za odevzdanou práci, která splňuje stanovené formální náležitosti, a která nevykazuje zjevné nedostatky.
+
+Kolik výtisků práce mám odevzdat?
+Počet výtisků DP (max 1 nebo žádný), které student odevzdá, a další podrobnosti týkající se odevzdávání diplomové práce, dále organizační pokyny pro průběh SZZ stanoví a zveřejní vyhláškou vedoucí ústavů ve spolupráci s garantem SP.
+
+Co mám dělat, když se nemohu zúčastnit SZZ?
+Omluva neúčasti studenta na SZZ je možná pouze ze závažných, zejména zdravotních důvodů. Písemnou a vlastnoručně podepsanou žádost o omluvu z termínu SZZ je student povinen předat co nejdříve garantovi SP. V případě nemoci doloží student k žádosti lékařské potvrzení. Garant SP rozhodne o přijetí/nepřijetí omluvy a své rozhodnutí uvede písemně na žádost studenta. V případě přijetí omluvy, garant SP zajistí vyřazení studenta z příslušné komise pro SZZ. Žádost o omluvu s vyjádřením garanta SP předá student ihned na studijní oddělení.
+Jaké jsou povinnosti po splnění SZZ?
+Nejpozději do 2 dnů od vykonání SZZ vyplní student v IS VUT výstupní list. Termíny promocí jsou 1. 7. až 4. 7. 2025. Pokud se student chce zúčastnit slavnostní promoce absolventů, je povinen ve stanoveném termínu zaplatit na portálu v modulu "Platba mikropoplatkem" nevratný poplatek za promoci ve výši 850,- Kč. Ve zvýšené ceně je zahrnut nejen promoční ceremoniál, ale také přístup k elektronické databázi promočních fotografií a video záznamu z ceremoniálu.
+
+Kdy se koná promoce?
+Termíny promocí jsou 1. 7. až 4. 7. 2025. Pokud se student chce zúčastnit slavnostní promoce absolventů, je povinen ve stanoveném termínu zaplatit na portálu v modulu "Platba mikropoplatkem" nevratný poplatek za promoci ve výši 850,- Kč. Ve zvýšené ceně je zahrnut nejen promoční ceremoniál, ale také přístup k elektronické databázi promočních fotografií a video záznamu z ceremoniálu.
+
+Nesplnil jsem SZZ.
+Student, který neuspěje u SZZ, se ihned dostaví na studijní oddělení k dořešení postupu ve studiu.
+
+Co mám dělat, když nesplňuji podmínky pro postup do SZZ?
+Student, který nesplní výše uvedené podmínky pro postup k SZZ, pokračuje ve studiu v následujícím akademickém roce (za předpokladu splnění podmínek pro postup do dalšího ročníku, daných studijním a zkušebním řádem).
+
+Co když práci neodevzdám v termínu?
+Student, který má v daném akademickém roce zapsaný předmět DP a převzal zadání, ale neodevzdal práci ve stanoveném termínu, odevzdá na studijní oddělení písemnou, vlastnoručně podepsanou žádost o pokračování ve studiu (rozvolnění studia) nebo o přerušení studia, nejpozději do 28. 5. 2025. V případě nejasností se student dostaví na studijní oddělení k projednání své studijní situace.
+Pokud student v tomto akademickém roce diplomovou práci neodevzdá, nezíská zápočet z povinného předmětu Diplomová práce a musí si ho zapsat v roce následujícím (neztrácí nárok na termín obhajoby).
+
+Co když jsem nesplnil podmínky pro získání kreditů nebo požadavky stanovené studijním plánem?
+Student, který má v daném akademickém roce zapsaný předmět DP a splnil zadání, odevzdal práci ve stanoveném termínu, ale nesplnil kreditovou skladbu nebo podmínky dané studijním plánem, odevzdá na studijní oddělení písemnou, vlastnoručně podepsanou žádost o pokračování ve studiu (rozvolnění studia) nebo o přerušení studia, nejpozději do 28. 5. 2025. V případě nejasností se student dostaví na studijní oddělení k projednání své studijní situace. Pokud student v tomto akademickém roce diplomovou práci neodevzdá, nezíská zápočet z povinného předmětu Diplomová práce a musí si ho zapsat v roce následujícím (neztrácí nárok na termín obhajoby).
+
+Kedy se zveřejňuje závěrečná práce (diplomová)?
+Závěrečná práce se zveřejňuje na internetových stránkách VUT až po obhajobě, zveřejňují se i neobhájené práce.
