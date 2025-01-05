@@ -9,6 +9,8 @@ from faq_finder import calculate_semantic, create_list_of_faq
 from functions import preprocess_txt
 from main import get_most_probable_answers
 
+model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2", device="cpu")
+
 app = FastAPI()
 
 app.mount("/web", StaticFiles(directory="web"), name="web")
@@ -67,7 +69,7 @@ async def handle_input(request: Request, user_input: str = Form(...)):
     #list_of_faq_processed = create_list_of_faq(processed_path) # jedno z tychto vkladam do calculate_semantic funkcie
 
     print("Calculating semantic probability...")
-    semantic_probability = calculate_semantic(user_input, list_of_faq, SentenceTransformer("paraphrase-multilingual-mpnet-base-v2", device="cpu"))
+    semantic_probability = calculate_semantic(user_input, list_of_faq, model)
     print("Getting most probable answers...")
     answer = get_most_probable_answers(list_of_faq, semantic_probability, 3)
 
