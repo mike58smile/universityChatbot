@@ -19,6 +19,14 @@ body {
   width: 60%;
   text-align: center;
 }
+.container_edit {
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    text-align: center;
+  }
 
 .container {
   background: rgb(255, 255, 255);
@@ -51,7 +59,7 @@ p {
 
 .button {
   background-color: #f5b805;
-  color: #9d3221;
+  color: #0f0e0e;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;

@@ -1,9 +1,8 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Form
+from fastapi import FastAPI, Form, Request
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
-from fastapi.requests import Request
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from faq_finder import reload_embeddings, calculate_semantic, create_list_of_faq
@@ -63,6 +62,21 @@ async def read_root(request: Request):
     print("FAQ is up to date")
     # Render the HTML template with an input form
     return templates.TemplateResponse("index.html", {"request": request})
+
+@app.get("/edit-faq", response_class=HTMLResponse)
+async def edit_faq(request: Request):
+    print("Reading FAQ file...")
+    with open(raw_path, "r", encoding="utf-8") as file:
+        faq_content = file.read()
+    return templates.TemplateResponse("faq_edit.html", {"request": request, "faq_content": faq_content})
+
+@app.post("/edit-faq", response_class=HTMLResponse)
+async def update_faq(request: Request, faq_content: str = Form(...)):
+    print("Writing to FAQ file...")
+    with open(raw_path, "w", encoding="utf-8", newline='') as file:
+        file.write(faq_content)
+    print("Finished writing to FAQ file.")
+    return RedirectResponse(url="/", status_code=303)
 
 # Create a POST endpoint to handle the form submission
 @app.post("/submit", response_class=HTMLResponse)

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upraviť FAQ</title>
+    <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body>
+    <div class="container_edit">
+        <h1 class="headline">Upravit FAQ</h1>
+        <p class="answer">Otázky a odpovědi ve formátu: Otázka je jednořádková, následuje jednořádková/víceřádková odpověď, po které následuje jeden vynechaný řádek. Po poslední odpovědi nenásleduje jeden vynechaný řádek.</p>
+        <form method="post" action="/edit-faq">
+            <textarea name="faq_content" rows="20" cols="80">{{ faq_content }}</textarea><br>
+            <input type="submit" class="button" value="Uložiť">
+        </form>
+    </div>
+</body>
+</html>
