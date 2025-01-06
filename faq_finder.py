@@ -103,6 +103,12 @@ def calculate_semantic(prompt: str, list_sentences: list[str], model: SentenceTr
             pickle.dump(references, f)
     return compare_semantic(prompt, references, model)
 
+def reload_embeddings(list_sentences: list[str], model: SentenceTransformer):
+    cache_file = "cached_references.pkl" # Check if cached embeddings exist
+    references = calc_embeddings(list_sentences, model)
+    with open(cache_file, "wb") as f:
+         pickle.dump(references, f)
+
 def get_best_match(list_sentences: list[str], probability: list, i: int = 3) -> list:
     """Get the best answer from a list of faq, with answer on the last line - the items in the format: question(NL)question(NL)...answer
 

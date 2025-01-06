@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
@@ -5,13 +6,25 @@ from fastapi.templating import Jinja2Templates
 from fastapi.requests import Request
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
-from faq_finder import calculate_semantic, create_list_of_faq
+from faq_finder import reload_embeddings, calculate_semantic, create_list_of_faq
 from functions import preprocess_txt
 from main import get_most_probable_answers
+import time
+import os
 
-model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device="cpu")
+model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2", device="cpu") # Load the pre-trained model
+raw_path = "input/faq_all.txt" # this is the file with all FAQs
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup code here
+    print("Application startup: save the time of edit of FAQ")
+    app.state.last_modified_time_faq = os.path.getmtime(raw_path)
+    yield  # This separates startup and shutdown logic
+    # Shutdown logic
+    print("Application shutdown")
+
+app = FastAPI(lifespan=lifespan) # Create the FastAPI app instance
 
 app.mount("/web", StaticFiles(directory="web"), name="web")
 templates = Jinja2Templates(directory="web")
@@ -21,8 +34,6 @@ def format_list_answers(answer: list[str]):
     formatted_answer = answer.replace("\n", "<br>")
     lines = answer.split("\n\n")
     print(lines[0])
-    
-
     for index, answer_i in enumerate(lines):
         firstAnswer = answer_i.split("\n")
         if len(firstAnswer) >= 3 and firstAnswer[1].startswith("1.") and firstAnswer[2].startswith("2."):
@@ -35,15 +46,6 @@ def format_list_answers(answer: list[str]):
     original_text = original_text.replace("\n", "<br>")
     return original_text
 
-    # firstAnswer = lines[0].split("\n")
-    # if len(firstAnswer) >= 3 and firstAnswer[1].startswith("1.") and firstAnswer[2].startswith("2."):
-    #     firstAnswer[0] = f"<b>{firstAnswer[0]}</b>"
-    #     formatted_answer = "\n".join(firstAnswer)
-    #     print(formatted_answer)
-    #     lines[0] = formatted_answer
-    #     original_text = "\n\n".join(lines)
-    #     answer = original_text
-
 # Define the input model (if needed)
 class InputData(BaseModel):
     user_input: str
@@ -51,12 +53,20 @@ class InputData(BaseModel):
 # Create a simple route that renders HTML input form
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
+    print("Monitoring file for changes...")
+    app.state.current_modified_time_faq = os.path.getmtime(raw_path)
+    if app.state.current_modified_time_faq != app.state.last_modified_time_faq:
+        print("FAQ has changed, calculating embedings...")
+        app.state.last_modified_time_faq = app.state.current_modified_time_faq
+        list_of_faq = create_list_of_faq(raw_path)
+        reload_embeddings(list_of_faq, model) # Calculate embeddings for the new FAQ list
+    print("FAQ is up to date")
+    # Render the HTML template with an input form
     return templates.TemplateResponse("index.html", {"request": request})
 
 # Create a POST endpoint to handle the form submission
 @app.post("/submit", response_class=HTMLResponse)
 async def handle_input(request: Request, user_input: str = Form(...)):
-    raw_path = "input/faq_all.txt" # toto menim
     #processed_path = "processed/faq_processed2.txt" # toto menim
     
     #print("Preprocessing text...")
